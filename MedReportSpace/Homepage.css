@@ -1,0 +1,13 @@
+﻿.s-img{
+    height:550px;
+    width:100%;
+}
+.s_img {
+    height: 100%;
+    object-fit: cover;
+    filter:brightness(0.5)
+}
+
+.slideshow{
+    width:100%;
+}

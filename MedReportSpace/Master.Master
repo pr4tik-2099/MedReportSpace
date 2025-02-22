@@ -1,0 +1,168 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="MedReportSpace.Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Med Report Space</title>
+     <!-- Bootstrap css -->
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+     <!-- Datatable css -->
+    <link href="Fontawsome/fontawesome-web/css/all.css" rel="stylesheet" />
+     <!-- Fontawsome css -->
+    <link href="DataTables/css/dataTables.dataTables.min.css" rel="stylesheet" />
+
+     <!-- Bootstrap js -->
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+     <!-- Jquery js -->
+    <script src="Bootstrap/js/js%20script.js"></script>
+     <!-- Popper js -->
+    <script src="Bootstrap/js/popper.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div>
+                <nav class="navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: mediumseagreen">
+                    <div class="container-fluid">
+                        <asp:LinkButton ID="LinkButton1" runat="server" class="navbar-brand" href="/HomePage.aspx"><img src="images/images/new%20logo1.png" width="50"/></asp:LinkButton>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <asp:LinkButton ID="LinkButton2" class="nav-link active" runat="server" aria-current="page" href="/HomePage.aspx">Home</asp:LinkButton>
+                                </li>
+                                <li class="nav-item">
+                                    <asp:LinkButton ID="AboutUs_btn" class="nav-link" runat="server">About Us</asp:LinkButton>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Terms</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav">
+                                <li>
+                                    <asp:LinkButton ID="viewBooks_btn" runat="server" class="nav-link active">View Reports</asp:LinkButton>
+                                </li>
+                                <li>
+                                    <asp:LinkButton ID="login_btn" runat="server" class="nav-link active" href="Login.aspx">User Login</asp:LinkButton>
+                                </li>
+                                <li>
+                                    <asp:LinkButton ID="signUp_btn" runat="server" class="nav-link active" href="SignUp.aspx">Sign Up</asp:LinkButton>
+                                </li>
+                                <li>
+                                    <asp:Button ID="logout_btn" class="nav-link active" runat="server" Text="Logout" OnClick="logout_btn_Click1" Visible="False" />
+                                </li>
+                                <li>
+                                    <asp:LinkButton runat="server" class="nav-link active" href="" ID="user_name" Visible="False">Hello User</asp:LinkButton>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+
+            <!-- Pages Content Holder -->
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <!-- Pages Content Holder -->
+
+            <footer class="bd-footer py-4 py-md-5 mt-5" style="background-color: mediumseagreen">
+                <div class="container-fluid py-4 py-md-2 px-4 px-md-3 text-body-secondary">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="row row1 m-lg-5 p-lg-5">
+
+                               
+                                    <div class="col-md-4 gx-5">
+                                      <center>
+                                        <img src="images/images/new%20logo1.png" width="120" />
+                                        <h4 class="text-light fw-bold">MED REPORT SPACE</h4>
+                                          <p class="text-light">To give real service you must add something which cannot be bought or measured with money, and that is sincerity and integrity</p>
+                                      </center>
+                                    </div>
+                                    
+                                <div class="col-md-2 offset-lg-1">
+                                    <h4 class="text-light text-decoration-underline fw-bold">LINKS</h4>&nbsp &nbsp
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <asp:LinkButton ID="admin_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light">Home</asp:LinkButton></li>
+                                        &nbsp 
+
+                                      <li>
+                                          <asp:LinkButton ID="authorMag_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true">Health Complications</asp:LinkButton></li>
+                                        &nbsp
+
+                                      <li>
+                                          <asp:LinkButton ID="pubMag_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true">View Reports</asp:LinkButton></li>
+                                        &nbsp
+
+                                      <li>
+                                          <asp:LinkButton ID="bookInv_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true">Articles</asp:LinkButton></li>
+                                        &nbsp
+
+                                      <li>
+                                          <asp:LinkButton ID="bookIssu_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true">About us</asp:LinkButton></li>
+                                        &nbsp
+
+                                      <li>
+                                          <asp:LinkButton ID="memMag_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true"></asp:LinkButton></li>
+                                        &nbsp
+                                    </ul>
+                                </div>
+
+                                <div class="col-md-2 mx-auto">
+                                    <h4 class="fw-bold text-decoration-underline text-light">LOGIN AS</h4>&nbsp &nbsp
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <asp:LinkButton ID="LinkButton3" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true">User Login</asp:LinkButton></li>
+                                        &nbsp
+                                         <li>
+                                             <asp:LinkButton ID="LinkButton4" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true">Admin Login</asp:LinkButton></li>
+                                        &nbsp
+                                         <li>
+                                             <asp:LinkButton ID="LinkButton5" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true">Sign Up</asp:LinkButton></li>
+                                        &nbsp
+                                    </ul>
+                                </div>
+
+                                <div class="col-md-3 mx-auto">
+                                <center>
+                                    <h4 class="text-light text-decoration-underline fw-bold">FOLLOW US</h4>&nbsp&nbsp
+                                    <div class="mt-3 ">
+                                        <img src="images/images/facebook.png" width="40" class="me-2"/>
+                                        <img src="images/images/instagram.png" width="40" class="me-2" />
+                                        <img src="images/images/github.png" width="40" class="me-2" />
+                                        <img src="images/images/linkedin.png" width="40"class=""/>
+                                    </div>
+
+                                </center>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </form>
+</body>
+</html>
