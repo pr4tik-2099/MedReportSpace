@@ -56,7 +56,7 @@
     <div class="container-fluid">
        <div class="row">
            <div class="col-md-12">
-
+               <asp:LinkButton ID="LinkButton1" runat="server" href="/Blood_pressure.aspx">LinkButton</asp:LinkButton>
                <center>
                        <div class="row row1 mt-5">
 

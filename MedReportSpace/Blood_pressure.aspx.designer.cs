@@ -15,13 +15,13 @@ namespace MedReportSpace
     {
 
         /// <summary>
-        /// FileUpload1 control.
+        /// BPreport_Upload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.FileUpload BPreport_Upload;
 
         /// <summary>
         /// labName_txt control.
@@ -33,22 +33,22 @@ namespace MedReportSpace
         protected global::System.Web.UI.WebControls.TextBox labName_txt;
 
         /// <summary>
-        /// Bls control.
+        /// Bpmm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Bls;
+        protected global::System.Web.UI.WebControls.TextBox Bpmm;
 
         /// <summary>
-        /// TextBox1 control.
+        /// Bphg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox Bphg;
 
         /// <summary>
         /// reportDate_dt control.
@@ -60,12 +60,30 @@ namespace MedReportSpace
         protected global::System.Web.UI.WebControls.TextBox reportDate_dt;
 
         /// <summary>
-        /// Button1 control.
+        /// Submit_btn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button Submit_btn;
+
+        /// <summary>
+        /// BpReport_Sqldtsrc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource BpReport_Sqldtsrc;
+
+        /// <summary>
+        /// BPreport_GridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView BPreport_GridView;
     }
 }
