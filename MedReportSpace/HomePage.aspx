@@ -57,6 +57,7 @@
        <div class="row">
            <div class="col-md-12">
                <asp:LinkButton ID="LinkButton1" runat="server" href="/Blood_pressure.aspx">LinkButton</asp:LinkButton>
+               <a href="Diabities.aspx">Diabities.aspx</a>
                <center>
                        <div class="row row1 mt-5">
 

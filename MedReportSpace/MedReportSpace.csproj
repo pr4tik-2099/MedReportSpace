@@ -73,6 +73,7 @@
     <Content Include="Bootstrap\js\bootstrap.min.js" />
     <Content Include="Bootstrap\js\js script.js" />
     <Content Include="Bootstrap\js\popper.min.js" />
+    <Content Include="bpreportimg.aspx" />
     <Content Include="BP_Chart.aspx" />
     <Content Include="DataTables\css\dataTables.dataTables.min.css" />
     <Content Include="DataTables\js\dataTables.min.js" />
@@ -2200,6 +2201,7 @@
     <Content Include="images\images\settings.png" />
     <Content Include="images\images\work-in-progress.png" />
     <Content Include="images\images\writer.png" />
+    <Content Include="Jquery\jquery-3.7.1.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="Web.config" />
     <Content Include="SignUp.aspx" />
@@ -2212,6 +2214,13 @@
     </Compile>
     <Compile Include="Blood_pressure.aspx.designer.cs">
       <DependentUpon>Blood_pressure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bpreportimg.aspx.cs">
+      <DependentUpon>bpreportimg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bpreportimg.aspx.designer.cs">
+      <DependentUpon>bpreportimg.aspx</DependentUpon>
     </Compile>
     <Compile Include="BP_Chart.aspx.cs">
       <DependentUpon>BP_Chart.aspx</DependentUpon>
@@ -2329,6 +2338,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BP_report_Images\" />
+    <Folder Include="BS_report_Images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

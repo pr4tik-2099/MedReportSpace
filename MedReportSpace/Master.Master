@@ -18,6 +18,8 @@
     <script src="Bootstrap/js/js%20script.js"></script>
      <!-- Popper js -->
     <script src="Bootstrap/js/popper.min.js"></script>
+    <!-- JQuery -->
+    <script src="Jquery/jquery-3.7.1.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
 
     </asp:ContentPlaceHolder>
@@ -26,23 +28,23 @@
     <form id="form1" runat="server">
         <div>
             <div>
-                <nav class="navbar navbar-expand-lg" data-bs-theme="dark" style="background-color: mediumseagreen">
+                <nav class="navbar navbar-expand-lg flex-wrap flex-lg" data-bs-theme="dark" style="background-color: mediumseagreen">
                     <div class="container-fluid">
-                        <asp:LinkButton ID="LinkButton1" runat="server" class="navbar-brand" href="/HomePage.aspx"><img src="images/images/new%20logo1.png" width="50"/></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton1" runat="server" class="navbar-brand me-lg-2" href="/HomePage.aspx"><img src="images/images/new%20logo1.png" width="30"/></asp:LinkButton>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <asp:LinkButton ID="LinkButton2" class="nav-link active" runat="server" aria-current="page" href="/HomePage.aspx">Home</asp:LinkButton>
+                                    
                                 </li>
                                 <li class="nav-item">
-                                    <asp:LinkButton ID="AboutUs_btn" class="nav-link" runat="server">About Us</asp:LinkButton>
+                                    <asp:LinkButton ID="AboutUs_btn" class="nav-link active" runat="server">About Us</asp:LinkButton>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Terms</a>
-                                    <ul class="dropdown-menu">
+                                    <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Terms</a>
+                                    <ul class="dropdown-menu bg-success">
                                         <li><a class="dropdown-item" href="#">Action</a></li>
                                         <li><a class="dropdown-item" href="#">Another action</a></li>
                                         <li>
@@ -69,7 +71,7 @@
                                     <asp:Button ID="logout_btn" class="nav-link active" runat="server" Text="Logout" OnClick="logout_btn_Click1" Visible="False" />
                                 </li>
                                 <li>
-                                    <asp:LinkButton runat="server" class="nav-link active" href="" ID="user_name" Visible="False">Hello User</asp:LinkButton>
+                                    <asp:LinkButton runat="server" class="nav-link active fw-semibold" href="" ID="user_name" Visible="False">Hello User</asp:LinkButton>
                                 </li>
                             </ul>
                         </div>

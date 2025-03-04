@@ -13,7 +13,7 @@
                         <div class="row row1">
                             <div class="col">
                                 <center>
-                                    
+                                    <img src="images/hypertension.png" width="70" alt=""/>
                                     <h3>Blood Pressure</h3>
                                 </center>
                             </div>
@@ -42,7 +42,7 @@
                             </div>
 
                             <div class="col-md-3">
-                                <label for="floatingInput">      </label>
+                                <label for="floatingInput">--------</label>
                                 <asp:TextBox ID="Bphg" runat="server" CssClass="Txt_box form-control form-floating border-info" SkinID="floatingInput" TextMode="Number">
                                 </asp:TextBox>
                                 <h5>Hg</h5>
@@ -69,38 +69,31 @@
 
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-7">
                                 <div class="card border-0">
                     <div class="card-body">
 
-                        <div class="row">
+                        <div class="row mt-1">
                             <div class="col">
                                 <center>
-                                    <h4>Report Table
-                                    </h4>
+                                    <h4>Report Table</h4>
                                 </center>
-                                <div class="row">
-                                    <div class="col">
-
-                                    </div>
-
-                                </div>
                             </div>
                         </div>
 
                         <div class="row">
-                            <asp:SqlDataSource ID="BpReport_Sqldtsrc" runat="server" ConnectionString="<%$ ConnectionStrings:Med_Space_ReportConnectionString2 %>" SelectCommand = "SELECT [labName], [BP_mm], [BP_hg], [Rp_Date] FROM [Blood_Pressure_Reports] Where userName=@userid">
+                            <asp:SqlDataSource ID="BpReport_Sqldtsrc" runat="server" ConnectionString="<%$ ConnectionStrings:Med_Space_ReportConnectionString2 %>" SelectCommand = "SELECT [labName], [BP_mm], [BP_hg], [Rp_Date] FROM [Blood_Pressure_Reports] Where userName=@userid Order By Rp_Date ASC">
                                 <SelectParameters>
                                     <asp:SessionParameter Name="userid" SessionField="username" Type="String" />
                                 </SelectParameters>
                             </asp:SqlDataSource>
                             <div class="col">
-                                <asp:GridView ID="BPreport_GridView" runat="server" CssClass="table table-dark table-bordered border-info" DataSourceID="BpReport_Sqldtsrc" AutoGenerateColumns="False">
+                                <asp:GridView ID="BPreport_GridView" runat="server" CssClass="table table-light table-bordered border-info mt-5" DataSourceID="BpReport_Sqldtsrc" AutoGenerateColumns="False">
                                     <Columns>
-                                        <asp:BoundField DataField="labName" HeaderText="labName" SortExpression="labName"></asp:BoundField>
-                                        <asp:BoundField DataField="BP_mm" HeaderText="BP_mm" SortExpression="BP_mm"></asp:BoundField>
-                                        <asp:BoundField DataField="BP_hg" HeaderText="BP_hg" SortExpression="BP_hg"></asp:BoundField>
-                                        <asp:BoundField DataField="Rp_Date" HeaderText="Rp_Date" SortExpression="Rp_Date"></asp:BoundField>
+                                        <asp:BoundField DataField="labName" HeaderText="Lab Name" SortExpression="labName"></asp:BoundField>
+                                        <asp:BoundField DataField="BP_mm" HeaderText="BP in mm" SortExpression="BP_mm"></asp:BoundField>
+                                        <asp:BoundField DataField="BP_hg" HeaderText="BP in hg" SortExpression="BP_hg"></asp:BoundField>
+                                        <asp:BoundField DataField="Rp_Date" HeaderText="Report Date" SortExpression="Rp_Date"></asp:BoundField>
                                     </Columns>
                                 </asp:GridView>
                             </div>

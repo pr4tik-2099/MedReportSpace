@@ -22,7 +22,7 @@ namespace MedReportSpace
                 user_name.Visible = true;
                 logout_btn.Visible = true;
                 user_name.Text = Session["username"].ToString();
-                user_name.ForeColor = System.Drawing.Color.Lime;
+                user_name.ForeColor = System.Drawing.Color.Cyan;
                 signUp_btn.Visible = false;
             }
         }
