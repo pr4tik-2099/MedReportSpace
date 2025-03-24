@@ -34,7 +34,7 @@ namespace MedReportSpace
             {
 
                 SqlConnection con = new SqlConnection(sqlconn);
-                SqlCommand cmd;
+                SqlCommand cmd = new SqlCommand();
                 try
                 {
                     string FilePath;
@@ -58,6 +58,11 @@ namespace MedReportSpace
                 {
                     Response.Write("<script> alert('" + ex.Message.ToString() + "')</script>");
                 }
+                finally
+                {
+                    cmd.Dispose();
+                    con.Close();
+                }
             }
 
         }
@@ -65,7 +70,7 @@ namespace MedReportSpace
         void FullNameInsertion()
         {
             SqlConnection conn = new SqlConnection(sqlconn);
-            SqlCommand cmd;
+            SqlCommand cmd = new SqlCommand();
             try
             {
                 conn.Open();
@@ -82,6 +87,11 @@ namespace MedReportSpace
             catch (Exception ex) 
             {
                 Response.Write("<script> alert('" + ex.Message.ToString() + "')</script>");
+            }
+            finally
+            {
+                cmd.Dispose();
+                conn.Close();
             }
         }
     }

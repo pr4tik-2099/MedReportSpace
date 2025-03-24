@@ -14,7 +14,7 @@
                             <center>
                               <img src="images/images/diabetes%20(1).png" width="80" alt=""/>
                               <h3>Blood Sugar</h3>
-                            <center>
+                            </center>
                           </div>
                       </div>
                       

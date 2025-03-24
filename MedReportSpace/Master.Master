@@ -30,27 +30,25 @@
             <div>
                 <nav class="navbar navbar-expand-lg flex-wrap flex-lg" data-bs-theme="dark" style="background-color: mediumseagreen">
                     <div class="container-fluid">
-                        <asp:LinkButton ID="LinkButton1" runat="server" class="navbar-brand me-lg-2" href="/HomePage.aspx"><img src="images/images/new%20logo1.png" width="30"/></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton1" runat="server" class="navbar-brand me-lg-2" href="/HomePage.aspx"><img src="images/images/new%20logo1.png" width="50"/></asp:LinkButton>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    
-                                </li>
+                                <li class="nav-item"></li>
                                 <li class="nav-item">
                                     <asp:LinkButton ID="AboutUs_btn" class="nav-link active" runat="server">About Us</asp:LinkButton>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Terms</a>
-                                    <ul class="dropdown-menu bg-success">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <ul class="dropdown-menu bg-dark">
+                                        <li><a class="dropdown-item" href="#"></a></li>
+                                        <li><a class="dropdown-item" href="#"></a></li>
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li><a class="dropdown-item" href="#"></a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
@@ -58,8 +56,16 @@
                                 </li>
                             </ul>
                             <ul class="navbar-nav">
-                                <li>
-                                    <asp:LinkButton ID="viewBooks_btn" runat="server" class="nav-link active">View Reports</asp:LinkButton>
+                                <li class="nav-item dropdown">
+                                    <asp:LinkButton ID="viewBooks_btn" runat="server" class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">View Reports</asp:LinkButton>
+                                    <ul class="dropdown-menu bg-dark">
+                                        <li><a class="dropdown-item" href="Blood_pressure.aspx">Blood Pressure</a></li>
+                                        <li><a class="dropdown-item" href="Diabities.aspx">Blood Sugar</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="General_Prescription.aspx">General Prescription</a></li>
+                                    </ul>
                                 </li>
                                 <li>
                                     <asp:LinkButton ID="login_btn" runat="server" class="nav-link active" href="Login.aspx">User Login</asp:LinkButton>
@@ -71,7 +77,7 @@
                                     <asp:Button ID="logout_btn" class="nav-link active" runat="server" Text="Logout" OnClick="logout_btn_Click1" Visible="False" />
                                 </li>
                                 <li>
-                                    <asp:LinkButton runat="server" class="nav-link active fw-semibold" href="" ID="user_name" Visible="False">Hello User</asp:LinkButton>
+                                    <asp:LinkButton runat="server" class="nav-link active fw-semibold" href="ProfilePage.aspx" ID="user_name" Visible="False">Hello User</asp:LinkButton>
                                 </li>
                             </ul>
                         </div>
@@ -92,17 +98,18 @@
 
                             <div class="row row1 m-lg-5 p-lg-5">
 
-                               
-                                    <div class="col-md-4 gx-5">
-                                      <center>
+
+                                <div class="col-md-4 gx-5">
+                                    <center>
                                         <img src="images/images/new%20logo1.png" width="120" />
                                         <h4 class="text-light fw-bold">MED REPORT SPACE</h4>
-                                          <p class="text-light">To give real service you must add something which cannot be bought or measured with money, and that is sincerity and integrity</p>
-                                      </center>
-                                    </div>
-                                    
+                                        <p class="text-light">To give real service you must add something which cannot be bought or measured with money, and that is sincerity and integrity</p>
+                                    </center>
+                                </div>
+
                                 <div class="col-md-2 offset-lg-1">
-                                    <h4 class="text-light text-decoration-underline fw-bold">LINKS</h4>&nbsp &nbsp
+                                    <h4 class="text-light text-decoration-underline fw-bold">LINKS</h4>
+                                    &nbsp &nbsp
                                     <ul class="list-unstyled">
                                         <li>
                                             <asp:LinkButton ID="admin_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light">Home</asp:LinkButton></li>
@@ -131,7 +138,8 @@
                                 </div>
 
                                 <div class="col-md-2 mx-auto">
-                                    <h4 class="fw-bold text-decoration-underline text-light">LOGIN AS</h4>&nbsp &nbsp
+                                    <h4 class="fw-bold text-decoration-underline text-light">LOGIN AS</h4>
+                                    &nbsp &nbsp
                                     <ul class="list-unstyled">
                                         <li>
                                             <asp:LinkButton ID="LinkButton3" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true">User Login</asp:LinkButton></li>
@@ -146,16 +154,17 @@
                                 </div>
 
                                 <div class="col-md-3 mx-auto">
-                                <center>
-                                    <h4 class="text-light text-decoration-underline fw-bold">FOLLOW US</h4>&nbsp&nbsp
+                                    <center>
+                                        <h4 class="text-light text-decoration-underline fw-bold">FOLLOW US</h4>
+                                        &nbsp&nbsp
                                     <div class="mt-3 ">
-                                        <img src="images/images/facebook.png" width="40" class="me-2"/>
+                                        <img src="images/images/facebook.png" width="40" class="me-2" />
                                         <img src="images/images/instagram.png" width="40" class="me-2" />
                                         <img src="images/images/github.png" width="40" class="me-2" />
-                                        <img src="images/images/linkedin.png" width="40"class=""/>
+                                        <img src="images/images/linkedin.png" width="40" class="" />
                                     </div>
 
-                                </center>
+                                    </center>
                                 </div>
                             </div>
 

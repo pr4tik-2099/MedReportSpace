@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-7 mx-auto">
             
-            <div class="card mt-5">
+            <div class="card mt-5 border-2 shadow p-3 mb-5 bg-body-tertiary rounded">
                 <div class="card-body">
 
                     <div class="row row1">
@@ -18,7 +18,7 @@
                         </div>
                     </div>
                   
-                    <div class="row row2">
+                    <div class="row row2 mb-3">
                         <div class="col">
                             <center>
                                 <h3>USER SIGN UP</h3>
@@ -69,7 +69,7 @@
                         <div class="col col-md-4  form-floating mb-3 form-group">
                                 <asp:Label ID="Label2" runat="server" Text="Contact Number"></asp:Label>
                               <center>
-                                  <asp:TextBox ID="pnum_txt" runat="server" CssClass="form-control border-info border-2" TextMode="Number"></asp:TextBox>
+                                  <asp:TextBox ID="pnum_txt" runat="server" CssClass="form-control border-info border-2" TextMode="Number" MaxLength="10"></asp:TextBox>
                               </center>
                         </div>
 
@@ -121,7 +121,7 @@
 
                     <div class="row row7">
                         <center>
-                            <h5 style="margin-bottom:30px;margin-top:30px;background-color:magenta;border-radius:20px;width:250px;color:ghostwhite;height:28px">Login Credentials</h5>
+                            <h5 style="margin-bottom:20px;margin-top:20px;background-color:magenta;border-radius:20px;width:250px;color:ghostwhite;height:28px">Login Credentials</h5>
                         </center>
                         <div class="col col-md-6 form-floating mb-3 form-group">
                                 <asp:Label ID="Label3" runat="server" Text="UserName"></asp:Label>
@@ -138,10 +138,8 @@
                         </div>
                     </div>
                     
-                      <div class="form-group l_btn">
-                          <center>
-                              <asp:Button ID="signup_btn" runat="server" Text="Sign Up" class="btn lbtn btn-success border-info border-1" OnClick="signup_btn_Click" />
-                          </center>
+                      <div class="row form-group l_btn mx-auto col-md-4 mt-3">
+                              <asp:Button ID="signup_btn" runat="server" Text="Submit" class="btn lbtn btn-success border-info border-1" OnClick="signup_btn_Click" />
                       </div>
 
                 </div>

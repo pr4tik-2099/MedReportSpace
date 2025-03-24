@@ -21,11 +21,11 @@ namespace MedReportSpace
         protected void login_btn_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(sqlconn);
-            SqlCommand cmd;
+            SqlCommand cmd = new SqlCommand();
             try 
             {
                 con.Open();
-                string UserloginQuery = "Select * from User_signUp_Details where user_Name ='" + username_txt.Text.ToString() + "' AND user_password='" + password_txt.Text.ToString() + "';";
+                string UserloginQuery = "Select * from user_Details where user_Name ='" + username_txt.Text.ToString() + "' AND user_password='" + password_txt.Text.ToString() + "';";
                 cmd = new SqlCommand(UserloginQuery,con);
                 var dr = cmd.ExecuteReader();
                 if(dr != null)
@@ -50,6 +50,11 @@ namespace MedReportSpace
             catch(Exception ex) 
             {
                 Response.Write("<script>" + ex.Message+ "</script>");
+            }
+            finally
+            {
+                cmd.Dispose();
+                con.Close();
             }
         }
     }

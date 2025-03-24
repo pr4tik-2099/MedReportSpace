@@ -35,7 +35,7 @@ namespace MedReportSpace
                 try
                 {
                     con.Open();
-                    string sqlquery = "select * from User_signUp_Details where user_Name='" + uname_txt.Text.ToString() + "';";
+                    string sqlquery = "select * from user_Details where user_Name='" + uname_txt.Text.Trim() + "';";
                     cmd = new SqlCommand(sqlquery, con);
                     SqlDataAdapter sd = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -81,12 +81,13 @@ namespace MedReportSpace
             try
             {
                 con.Open();
-                string sqlquery = "insert into User_signUp_Details(full_Name, email_Id, birth_Date, gender, contact_Number, [state], [city], [pincode], [user_Address], [user_Name], [user_password]) values('" + name_txt.Text.ToString() + "','" + email_txt.Text.ToString() + "','" + dob_txt.Text.ToString() + "','" + Gender_ddl.Text.ToString() + "','" + pnum_txt.Text.ToString() + "','" + State_list.Text.ToString() + "','" + city_txt.Text.ToString() + "','" + pincode_txt.Text.ToString() + "','" + address_txt.Text.ToString() + "','" + uname_txt.Text.ToString() + "','" + upass_txt.Text.ToString() + "')";
+                string sqlquery = "insert into user_Details(full_Name, email_Id, birth_Date, gender, contact_Number, [state], [city], [pincode], [user_Address], [user_Name], [user_password]) values('" + name_txt.Text.Trim() + "','" + email_txt.Text.Trim() + "','" + dob_txt.Text + "','" + Gender_ddl.Text.Trim() + "','" + pnum_txt.Text.Trim() + "','" + State_list.Text.Trim() + "','" + city_txt.Text.Trim() + "','" + pincode_txt.Text.Trim() + "','" + address_txt.Text.Trim() + "','" + uname_txt.Text.Trim() + "','" + upass_txt.Text.Trim() + "')";
                 cmd = new SqlCommand(sqlquery, con);
                 int result = cmd.ExecuteNonQuery();
                 if (result > 0)
                 {
                     Response.Write("<script> alert('Success'); </script>");
+                    Response.Redirect("Login.aspx");
                 }
                 else
                 {
@@ -95,7 +96,7 @@ namespace MedReportSpace
             }
             catch (Exception ex)
             {
-                Response.Write("<script> alert('" + ex.Message.ToString() + "'); </script>");
+                Response.Write("<script> alert('" + ex.Message.Trim() + "'); </script>");
             }
             finally
             {

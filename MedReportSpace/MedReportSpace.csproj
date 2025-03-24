@@ -2203,6 +2203,7 @@
     <Content Include="images\images\writer.png" />
     <Content Include="Jquery\jquery-3.7.1.min.js" />
     <Content Include="Login.aspx" />
+    <Content Include="ProfilePage.aspx" />
     <Content Include="Web.config" />
     <Content Include="SignUp.aspx" />
     <Content Include="Diabities.aspx" />
@@ -2256,6 +2257,13 @@
     </Compile>
     <Compile Include="Master.Master.designer.cs">
       <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ProfilePage.aspx.cs">
+      <DependentUpon>ProfilePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfilePage.aspx.designer.cs">
+      <DependentUpon>ProfilePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignUp.aspx.cs">

@@ -21,8 +21,7 @@
                                   <h4>Login</h4>
                               </div>
                           </div>
-
-                          <div class="row3 mt-3">
+                          <div class="row3 mt-4">
 
                               <div class="col1 ">
                                   <div class="form-group">
@@ -32,7 +31,7 @@
                                   </div>
                               </div>
 
-                              <div class="col1 mt-1">
+                              <div class="col1 mt-3">
                                   <div class="form-group">
                                       <label for="floatingInput" class="fw-semibold">Password</label>
                                       <asp:TextBox ID="password_txt" runat="server" CssClass="Txt_box form-control  border-info border-2" SkinID="floatingInput" TextMode="Password">

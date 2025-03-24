@@ -13,7 +13,7 @@ namespace MedReportSpace
     public partial class WebForm2 : System.Web.UI.Page
     {
         string UserName;
-        String FullName;
+        string FullName;
         string sqlconn = ConfigurationManager.ConnectionStrings["conn"].ConnectionString;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace MedReportSpace
             else 
             {
                 SqlConnection conn = new SqlConnection(sqlconn);
-                SqlCommand cmd;
+                SqlCommand cmd = new SqlCommand();
                 try 
                 {
                     conn.Open();
@@ -53,13 +53,18 @@ namespace MedReportSpace
                 {
                     Response.Write("<script> alert('" + ex.Message.ToString() + "')</script>");
                 }
+                finally
+                {
+                    cmd.Dispose();
+                    conn.Close();
+                }
             }
         }
 
         void FullNameInsertion()
         {
             SqlConnection conn = new SqlConnection(sqlconn);
-            SqlCommand cmd;
+            SqlCommand cmd = new SqlCommand();
             try
             {
                 conn.Open();
@@ -75,6 +80,11 @@ namespace MedReportSpace
             catch (Exception ex) 
             {
                 Response.Write("<script> alert('" + ex.Message.ToString() + "')</script>");
+            }
+            finally
+            {
+                cmd.Dispose();
+                conn.Close();
             }
         }
     }
