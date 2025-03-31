@@ -68,7 +68,7 @@ namespace MedReportSpace
             try
             {
                 conn.Open();
-                string query = "Select * from User_signUp_Details where user_Name='" + Session["username"].ToString() + "';";
+                string query = "Select * from user_Details where user_Name='" + Session["username"].ToString() + "';";
                 cmd = new SqlCommand(query,conn);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -86,6 +86,27 @@ namespace MedReportSpace
                 cmd.Dispose();
                 conn.Close();
             }
+        }
+
+        protected void cmdDownLoad_Click(object sender, EventArgs e)
+        {
+            Button myBut = sender as Button;
+            GridViewRow gRow = myBut.NamingContainer as GridViewRow;
+
+            string strFileOnly = gRow.Cells[3].Text;
+            if (strFileOnly != "")
+            {
+
+                string strFile = "";
+                strFile = Server.MapPath(@"" + strFileOnly);
+
+                string sMineType = MimeMapping.GetMimeMapping(strFileOnly);
+                Response.ContentType = sMineType;
+                Response.AppendHeader("Content-Disposition", "attachment; filename=" + strFileOnly);
+                Response.TransmitFile(strFile);
+                Response.End();
+            }
+
         }
     }
 }

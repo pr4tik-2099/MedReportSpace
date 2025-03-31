@@ -1,6 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Blood_pressure.aspx.cs" Inherits="MedReportSpace.Blood_pressure" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Blood_pressure.aspx.cs" enableEventValidation="false" Inherits="MedReportSpace.Blood_pressure" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid">
@@ -13,7 +14,7 @@
                         <div class="row row1">
                             <div class="col">
                                 <center>
-                                    <img src="images/hypertension.png" width="70" alt=""/>
+                                    <img src="images/hypertension.png" width="70" alt="" />
                                     <h3>Blood Pressure</h3>
                                 </center>
                             </div>
@@ -70,7 +71,7 @@
             </div>
 
             <div class="col-md-7">
-                                <div class="card border-0">
+                <div class="card border-0">
                     <div class="card-body">
 
                         <div class="row mt-1">
@@ -82,7 +83,7 @@
                         </div>
 
                         <div class="row">
-                            <asp:SqlDataSource ID="BpReport_Sqldtsrc" runat="server" ConnectionString="<%$ ConnectionStrings:Med_Space_ReportConnectionString2 %>" SelectCommand = "SELECT [labName], [BP_mm], [BP_hg], [Rp_Date] FROM [Blood_Pressure_Reports] Where userName=@userid Order By Rp_Date ASC">
+                            <asp:SqlDataSource ID="BpReport_Sqldtsrc" runat="server" ConnectionString="<%$ ConnectionStrings:Med_Space_ReportConnectionString2 %>" SelectCommand="SELECT [labName], [BP_mm], [BP_hg], [Rp_Date],img_link FROM [Blood_Pressure_Reports] Where userName=@userid Order By Rp_Date ASC">
                                 <SelectParameters>
                                     <asp:SessionParameter Name="userid" SessionField="username" Type="String" />
                                 </SelectParameters>
@@ -94,10 +95,24 @@
                                         <asp:BoundField DataField="BP_mm" HeaderText="BP in mm" SortExpression="BP_mm"></asp:BoundField>
                                         <asp:BoundField DataField="BP_hg" HeaderText="BP in hg" SortExpression="BP_hg"></asp:BoundField>
                                         <asp:BoundField DataField="Rp_Date" HeaderText="Report Date" SortExpression="Rp_Date"></asp:BoundField>
+                                        <asp:BoundField DataField="img_link" HeaderText="Image" SortExpression="img_link"></asp:BoundField>
+                                        <%--<asp:TemplateField HeaderText="Preview" ItemStyle-HorizontalAlign="Center">
+                                            <ItemTemplate>
+                                                <asp:Image ID="Image1" runat="server" Width="120px"
+                                                    ImageUrl='<% # Eval("img_link") %>' />
+                                            </ItemTemplate>
+                                        </asp:TemplateField>--%>
+                                        <asp:TemplateField HeaderText="Download" ItemStyle-HorizontalAlign="Center">
+                                            <ItemTemplate>
+                                                <asp:Button ID="cmdDownLoad" runat="server" Text="Download" CssClass="btn btn-info" OnClick="cmdDownLoad_Click" />
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
                                     </Columns>
                                 </asp:GridView>
                             </div>
                         </div>
+
+                        <asp:LinkButton ID="LinkButton1" CssClass="btn btn-outline-info" runat="server" href="bpreportimg.aspx">LinkButton</asp:LinkButton>
 
                     </div>
                 </div>

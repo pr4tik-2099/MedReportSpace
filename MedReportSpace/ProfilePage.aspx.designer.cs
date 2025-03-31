@@ -249,31 +249,31 @@ namespace MedReportSpace
         protected global::System.Web.UI.WebControls.TextBox age_txt;
 
         /// <summary>
-        /// CheckBox1 control.
+        /// hypertension_chk control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
+        protected global::System.Web.UI.WebControls.CheckBox hypertension_chk;
 
         /// <summary>
-        /// CheckBox2 control.
+        /// diabetes_chk control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox2;
+        protected global::System.Web.UI.WebControls.CheckBox diabetes_chk;
 
         /// <summary>
-        /// CheckBox3 control.
+        /// smoking_chk control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox3;
+        protected global::System.Web.UI.WebControls.CheckBox smoking_chk;
 
         /// <summary>
         /// bs_btn control.

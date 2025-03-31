@@ -94,6 +94,13 @@ namespace MedReportSpace
                         address_txt.Text = dr["user_Address"].ToString();
                         uname_txt.Text = dr["user_Name"].ToString();
                         upass_txt.Text = dr["user_password"].ToString();
+                        age_txt.Text = dr["age"].ToString();
+                        height_txt.Text = dr["height"].ToString();
+                        Weight_txt.Text = dr["weight"].ToString();
+                        hypertension_chk.Checked = Convert.ToBoolean(dr["hypertension"]);
+                        diabetes_chk.Checked = Convert.ToBoolean(dr["diabetes"]);
+                        smoking_chk.Checked = Convert.ToBoolean(dr["smoking"]);
+
                     }
                     else 
                     {
@@ -115,7 +122,35 @@ namespace MedReportSpace
 
         protected void bs_btn_Click(object sender, EventArgs e)
         {
-
+            SqlConnection con = new SqlConnection(sqlconn);
+            SqlCommand cmd = new SqlCommand();
+            try
+            {
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                    string UpdateQuery = "Update user_Details SET age='"+ age_txt.Text +"',height='"+ height_txt.Text +"',weight='"+ Weight_txt.Text +"', hypertension = '" + hypertension_chk.Checked + "', diabetes='"+ diabetes_chk.Checked +"',smoking='"+ smoking_chk.Checked +"' Where user_Name='" + Session["username"].ToString() + "';";
+                    cmd = new SqlCommand(UpdateQuery, con);
+                    int result = cmd.ExecuteNonQuery();
+                    if (result > 0)
+                    {
+                        Response.Write("<script> alert('SUCCESS')</script>");
+                    }
+                    else
+                    {
+                        Response.Write("<script> alert('not working')</script>");
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                Response.Write("<script> alert('" + ex.Message.ToString() + "')</script>");
+            }
+            finally
+            {
+                cmd.Dispose();
+                con.Close();
+            }
         }
     }
 }

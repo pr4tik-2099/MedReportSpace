@@ -21,12 +21,13 @@ namespace MedReportSpace
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["username"]= "pratik1234";
             BPreport_GridView.DataBind();
         }
 
         protected void Submit_btn_Click(object sender, EventArgs e)
         {
-            if(labName_txt.Text == "")
+            if (labName_txt.Text == "")
             {
                 Response.Write("<script>alert('Please Fill necessary Details')</script>");
             }
@@ -74,17 +75,17 @@ namespace MedReportSpace
             try
             {
                 conn.Open();
-                string Query = "Select * from User_signUp_Details where user_Name ='" + Session["username"].ToString()+ "';";
+                string Query = "Select * from user_Details where user_Name ='" + Session["username"].ToString() + "';";
                 cmd = new SqlCommand(Query, conn);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
-                
+
                 FullName = dt.Rows[0]["full_Name"].ToString();
                 UserName = dt.Rows[0]["user_Name"].ToString();
 
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 Response.Write("<script> alert('" + ex.Message.ToString() + "')</script>");
             }
@@ -93,6 +94,27 @@ namespace MedReportSpace
                 cmd.Dispose();
                 conn.Close();
             }
+        }
+
+        protected void cmdDownLoad_Click(object sender, EventArgs e)
+        {
+            Button myBut = sender as Button;
+            GridViewRow gRow = myBut.NamingContainer as GridViewRow;
+
+            string strFileOnly = gRow.Cells[4].Text;
+            if (strFileOnly != "")
+            {
+
+                string strFile = "";
+                strFile = Server.MapPath(@"" + strFileOnly);
+
+                string sMineType = MimeMapping.GetMimeMapping(strFileOnly);
+                Response.ContentType = sMineType;
+                Response.AppendHeader("Content-Disposition", "attachment; filename=" + strFileOnly);
+                Response.TransmitFile(strFile);
+                Response.End();
+            }
+
         }
     }
 }

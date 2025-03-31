@@ -82,12 +82,21 @@
                             <center>
                                 <asp:DropDownList ID="State_list" runat="server" CssClass="drp_box form-control border-info border-2">
 
-                                     <asp:listItem Text="select" Value="Select" />
-                                     <asp:listItem Text="West Bengal" Value="West Bengal" />
-                                     <asp:listItem Text="Andra Pradesh" Value="Andra Pradesh" />
-                                     <asp:listItem Text="Bihar" Value="Bihar" />
-                                     <asp:listItem Text="Uttar Pradesh" Value="Uttar Pradesh" />
-                                     <asp:listItem Text="Kashmir" Value="Kashmir" />
+                                    <asp:ListItem Text="select" Value="Select" />
+                                    <asp:ListItem Text="West Bengal" Value="West Bengal" />
+                                    <asp:ListItem Text="Andra Pradesh" Value="Andra Pradesh" />
+                                    <asp:ListItem Text="Bihar" Value="Bihar" />
+                                    <asp:ListItem Text="Uttar Pradesh" Value="Uttar Pradesh" />
+                                    <asp:ListItem Text="Kashmir" Value="Kashmir" />
+                                    <asp:ListItem Text="Kerala" Value="Kerala" />
+                                    <asp:ListItem Text="Tamil Nadu" Value="Tamil Nadu" />
+                                    <asp:ListItem Text="Karnataka" Value="Karnataka" />
+                                    <asp:ListItem Text="Maharashtra" Value="Maharashtra" />
+                                    <asp:ListItem Text="Gujarat" Value="Gujarat" />
+                                    <asp:ListItem Text="Rajasthan" Value="Rajasthan" />
+                                    <asp:ListItem Text="Punjab" Value="Punjab" />
+                                    <asp:ListItem Text="Haryana" Value="Haryana" />
+                                     
                                 </asp:DropDownList>
                                  
                               </center>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Diabities.aspx.cs" Inherits="MedReportSpace.WebForm2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Diabities.aspx.cs" Inherits="MedReportSpace.WebForm2" enableEventValidation="false" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -76,7 +76,7 @@
                    </div>
 
                    <div class="row">
-                       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Med_Space_ReportConnectionString %>" SelectCommand="SELECT [labName], [BS_lvl], [Rp_Date] FROM [Blood_Sugar_Reports] Where userName=@userid Order By Rp_Date ASC">
+                       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Med_Space_ReportConnectionString %>" SelectCommand="SELECT [labName], [BS_lvl], [Rp_Date],[img_Link] FROM [Blood_Sugar_Reports] Where userName=@userid Order By Rp_Date ASC">
                            <SelectParameters>
                                <asp:SessionParameter Name="userid" SessionField="username" Type="String" />
                            </SelectParameters>
@@ -87,6 +87,12 @@
                                    <asp:BoundField DataField="labName" HeaderText="labName" SortExpression="labName"></asp:BoundField>
                                    <asp:BoundField DataField="BS_lvl" HeaderText="BS_lvl" SortExpression="BS_lvl"></asp:BoundField>
                                    <asp:BoundField DataField="Rp_Date" HeaderText="Rp_Date" SortExpression="Rp_Date"></asp:BoundField>
+                                   <asp:BoundField DataField="img_Link" HeaderText="Image" SortExpression="img_Link"></asp:BoundField>
+                                   <asp:TemplateField HeaderText="Download" ItemStyle-HorizontalAlign="Center">
+                                       <ItemTemplate>
+                                           <asp:Button ID="cmdDownLoad" runat="server" Text="Download" CssClass="btn btn-info" OnClick="cmdDownLoad_Click" />
+                                       </ItemTemplate>
+                                   </asp:TemplateField>
                                </Columns>
                            </asp:GridView>
                        </div>

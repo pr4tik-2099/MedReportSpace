@@ -79,6 +79,15 @@
                                         <asp:ListItem Text="Bihar" Value="Bihar" />
                                         <asp:ListItem Text="Uttar Pradesh" Value="Uttar Pradesh" />
                                         <asp:ListItem Text="Kashmir" Value="Kashmir" />
+                                        <asp:ListItem Text="Kerala" Value="Kerala" />
+                                        <asp:ListItem Text="Tamil Nadu" Value="Tamil Nadu" />
+                                        <asp:ListItem Text="Karnataka" Value="Karnataka" />
+                                        <asp:ListItem Text="Maharashtra" Value="Maharashtra" />
+                                        <asp:ListItem Text="Gujarat" Value="Gujarat" />
+                                        <asp:ListItem Text="Rajasthan" Value="Rajasthan" />
+                                        <asp:ListItem Text="Punjab" Value="Punjab" />
+                                        <asp:ListItem Text="Haryana" Value="Haryana" />
+
                                     </asp:DropDownList>
 
                                 </center>
@@ -154,16 +163,19 @@
                             <div class="col-md-4">
                                 <label class="">Height</label>
                                 <asp:TextBox ID="height_txt" runat="server" CssClass="form-control border-info border-1"></asp:TextBox>
+                                <h5>cm</h5>
                             </div>
 
                             <div class="col-md-4">
                                 <label>Weight</label>
                                 <asp:TextBox ID="Weight_txt" runat="server" CssClass="form-control border-info border-1"></asp:TextBox>
+                                <h5>kg</h5>
                             </div>
 
                             <div class="col-md-4">
                                 <label>Age</label>
                                 <asp:TextBox ID="age_txt" runat="server" CssClass="form-control border-info border-1"></asp:TextBox>
+                                <h5>years</h5>
                             </div>
 
                         </div>
@@ -171,15 +183,15 @@
                         <div class="row row3 mt-3 form-group mx-auto">
 
                             <div class="col-md-4">
-                                <asp:CheckBox ID="CheckBox1" CssClass="form-control border-0" runat="server" Text="Hypertension" />
+                                <asp:CheckBox ID="hypertension_chk" CssClass="form-control border-0" runat="server" Text="Hypertension" />
                             </div>
 
                             <div class="col-md-4">
-                                <asp:CheckBox ID="CheckBox2" CssClass="form-control border-0" runat="server" Text="Diabetes" />
+                                <asp:CheckBox ID="diabetes_chk" CssClass="form-control border-0" runat="server" Text="Diabetes" />
                             </div>
 
                             <div class="col-md-4">
-                                <asp:CheckBox ID="CheckBox3" CssClass="form-control border-0" runat="server" Text="Smoking" />
+                                <asp:CheckBox ID="smoking_chk" CssClass="form-control border-0" runat="server" Text="Smoking" />
                             </div>
 
                         </div>

@@ -16,12 +16,16 @@ namespace MedReportSpace
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["username"] == null || Session["username"] == "")
+            {
+                Response.Redirect("Login.aspx");
+            }
             SqlConnection conn = new SqlConnection(sqlconn);
             SqlCommand cmd;
             try
             {
                 conn.Open();
-                string query = "Select img_link from Blood_Pressure_Reports where userName='abhi45'";
+                string query = "Select img_link from Blood_Pressure_Reports where userName='" + Session["username"] +"'";
                 cmd = new SqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
