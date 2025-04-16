@@ -7,6 +7,7 @@
     <title>Med Report Space</title>
      <!-- Bootstrap css -->
     <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Bootstrap/bootstrap.css" rel="stylesheet" />
      <!-- Datatable css -->
     <link href="Fontawsome/fontawesome-web/css/all.css" rel="stylesheet" />
      <!-- Fontawsome css -->
@@ -20,6 +21,8 @@
     <script src="Bootstrap/js/popper.min.js"></script>
     <!-- JQuery -->
     <script src="Jquery/jquery-3.7.1.min.js"></script>
+    <!-- DataTable -->
+    <script src="Datatables/js/dataTables.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
 
     </asp:ContentPlaceHolder>
@@ -28,9 +31,9 @@
     <form id="form1" runat="server">
         <div>
             <div>
-                <nav class="navbar navbar-expand-lg flex-wrap flex-lg" data-bs-theme="dark" style="background-color: mediumseagreen">
+                <nav class="navbar navbar-expand-lg flex-wrap flex-lg p-2 border border-1" data-bs-theme="dark" style="background-color: mediumseagreen">
                     <div class="container-fluid">
-                        <asp:LinkButton ID="LinkButton1" runat="server" class="navbar-brand me-lg-2" href="/HomePage.aspx"><img src="images/images/new%20logo1.png" width="50"/></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton1" runat="server" class="navbar-brand me-lg-2" href="/HomePage.aspx"><img src="images/images/new%20logo1.png" width="40"/></asp:LinkButton>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -96,43 +99,43 @@
                     <div class="row">
                         <div class="col-md-12">
 
-                            <div class="row row1 m-lg-5 p-lg-5">
+                            <div class="row row1 m-lg-5 p-lg-5 mx-auto">
 
 
-                                <div class="col-md-4 gx-5">
+                                <div class="col-md-4 gx-5 mb-5">
                                     <center>
                                         <img src="images/images/new%20logo1.png" width="120" />
                                         <h4 class="text-light fw-bold">MED REPORT SPACE</h4>
-                                        <p class="text-light">To give real service you must add something which cannot be bought or measured with money, and that is sincerity and integrity</p>
+                                        <p class="text-light" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:18px">To give real service you must add something which cannot be bought or measured with money, and that is sincerity and integrity</p>
                                     </center>
                                 </div>
 
-                                <div class="col-md-2 offset-lg-1">
+                                <div class="col-md-2 offset-lg-1 mx-auto">
                                     <h4 class="text-light text-decoration-underline fw-bold">LINKS</h4>
                                     &nbsp &nbsp
                                     <ul class="list-unstyled">
                                         <li>
-                                            <asp:LinkButton ID="admin_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light">Home</asp:LinkButton></li>
+                                            <asp:LinkButton ID="admin_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Font-Size="Medium">Home</asp:LinkButton></li>
                                         &nbsp 
 
                                       <li>
-                                          <asp:LinkButton ID="authorMag_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true">Health Complications</asp:LinkButton></li>
+                                          <asp:LinkButton ID="authorMag_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true" Font-Size="Medium">Health Complications</asp:LinkButton></li>
                                         &nbsp
 
                                       <li>
-                                          <asp:LinkButton ID="pubMag_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true">View Reports</asp:LinkButton></li>
+                                          <asp:LinkButton ID="pubMag_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true" Font-Size="Medium">View Reports</asp:LinkButton></li>
                                         &nbsp
 
                                       <li>
-                                          <asp:LinkButton ID="bookInv_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true">Articles</asp:LinkButton></li>
+                                          <asp:LinkButton ID="bookInv_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true" Font-Size="Medium">Articles</asp:LinkButton></li>
                                         &nbsp
 
                                       <li>
-                                          <asp:LinkButton ID="bookIssu_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true">About us</asp:LinkButton></li>
+                                          <asp:LinkButton ID="bookIssu_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true" Font-Size="Medium">About us</asp:LinkButton></li>
                                         &nbsp
 
                                       <li>
-                                          <asp:LinkButton ID="memMag_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true"></asp:LinkButton></li>
+                                          <asp:LinkButton ID="memMag_btn" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true" Font-Size="Medium"></asp:LinkButton></li>
                                         &nbsp
                                     </ul>
                                 </div>
@@ -142,13 +145,13 @@
                                     &nbsp &nbsp
                                     <ul class="list-unstyled">
                                         <li>
-                                            <asp:LinkButton ID="LinkButton3" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true">User Login</asp:LinkButton></li>
+                                            <asp:LinkButton ID="LinkButton3" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true" Font-Size="Medium">User Login</asp:LinkButton></li>
                                         &nbsp
                                          <li>
-                                             <asp:LinkButton ID="LinkButton4" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true">Admin Login</asp:LinkButton></li>
+                                             <asp:LinkButton ID="LinkButton4" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true" Font-Size="Medium">Admin Login</asp:LinkButton></li>
                                         &nbsp
                                          <li>
-                                             <asp:LinkButton ID="LinkButton5" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true">Sign Up</asp:LinkButton></li>
+                                             <asp:LinkButton ID="LinkButton5" runat="server" class="link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover footerlinks text-light" Visible="true" Font-Size="Medium">Sign Up</asp:LinkButton></li>
                                         &nbsp
                                     </ul>
                                 </div>

@@ -15,13 +15,13 @@ namespace MedReportSpace
     {
 
         /// <summary>
-        /// FileUpload1 control.
+        /// genPrecReport_upload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.FileUpload genPrecReport_upload;
 
         /// <summary>
         /// labName_txt control.
@@ -33,13 +33,22 @@ namespace MedReportSpace
         protected global::System.Web.UI.WebControls.TextBox labName_txt;
 
         /// <summary>
-        /// issue_txt control.
+        /// desc_txt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox issue_txt;
+        protected global::System.Web.UI.WebControls.TextBox desc_txt;
+
+        /// <summary>
+        /// drName_txt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox drName_txt;
 
         /// <summary>
         /// reportDate_dt control.
@@ -51,12 +60,30 @@ namespace MedReportSpace
         protected global::System.Web.UI.WebControls.TextBox reportDate_dt;
 
         /// <summary>
-        /// Button1 control.
+        /// submit_btn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button submit_btn;
+
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+
+        /// <summary>
+        /// GPreport_grdview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GPreport_grdview;
     }
 }

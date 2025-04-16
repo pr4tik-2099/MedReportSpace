@@ -21,7 +21,7 @@ namespace MedReportSpace
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["username"]= "pratik1234";
+          // Session["username"]= "pratik1234";
             BPreport_GridView.DataBind();
         }
 
@@ -44,7 +44,7 @@ namespace MedReportSpace
                     FilePath = "~/BP_report_Images/" + FileName;
                     FullNameInsertion();
                     con.Open();
-                    string insertQuery = "insert into Blood_Pressure_Reports(full_Name,userName,labName,BP_mm,BP_hg,Rp_Date,img_link) values('" + FullName + "','" + UserName + "','" + labName_txt.Text.ToString() + "','" + Bpmm.Text.ToString() + "','" + Bphg.Text.ToString() + "','" + reportDate_dt.Text.ToString() + "','" + FilePath + "');";
+                    string insertQuery = "insert into Blood_Pressure_Reports(full_Name,userName,labName,BP_mm,BP_hg,Rp_Date,img_link) values('" + FullName + "','" + UserName + "','" + labName_txt.Text.ToString() + "','" + Bpmm.Text.ToString() + "','" + Bphg.Text.ToString() + "','" + reportDate_dt.Text + "','" + FilePath + "');";
                     cmd = new SqlCommand(insertQuery, con);
                     cmd.CommandType = CommandType.Text;
                     int add = cmd.ExecuteNonQuery();
