@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-7 mx-auto">
             
-            <div class="card mt-5 border-2 shadow p-3 mb-5 bg-body-tertiary rounded">
+            <div class="card mt-5 border-1 shadow p-3 mb-5 bg-body-tertiary rounded">
                 <div class="card-body">
 
                     <div class="row row1">

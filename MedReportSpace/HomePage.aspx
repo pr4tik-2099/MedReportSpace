@@ -23,22 +23,22 @@
                 <div class="carousel-item active s-img">
                     <img src="images/images/doctors.jpg" class="d-block w-100 s_img" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <h5 class="display-5 fw-bold">Med Report Space</h5>
+                        <p class="h5">Best Place to Store Your Medical Reports</p>
                     </div>
                 </div>
                 <div class="carousel-item s-img">
                     <img src="images/images/Gemini_Generated_Image_j21tzj21tzj21tzj.jpg" class="d-block w-100 s_img" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <h5 class="display-5 fw-bold">Report Analysis</h5>
+                        <p class="h5">Check And Download your Reports and Analysis</p>
                     </div>
                 </div>
                 <div class="carousel-item s-img">
                     <img src="images/images/Doctor%20%20photo.jpg" class="d-block w-100 s_img" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <h5 class="display-5 fw-bold">Checkups</h5>
+                        <p class="h5">Consult With Our Assosiated Doctors</p>
                     </div>
                 </div>
             </div>
@@ -57,37 +57,37 @@
        <div class="row">
            <div class="col-md-12">
                <center>
-                       <div class="row row1 mt-5">
+                       <div class="row row1 mt-2">
 
-                           <div class="col-md-4 hover-class">
+                           <div class="col-md-4 hover-class mt-3">
                                <div class="card border-1 border-info" style="width: 18rem;">
                                    <img src="images/images/doc.jpg" class="card-img-top" alt="...">
                                    <div class="card-body">
-                                       <h5 class="card-title">Card title</h5>
-                                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                       <a href="#" class="btn btn-primary">Go somewhere</a>
+                                       <h5 class="card-title h3">Dr Deon Lang</h5>
+                                       <p class="card-text fw-bold text-info">Dermatologist</p>
+                                       <a href="#" class="btn btn-info">Consult</a>
                                    </div>
                                </div>
                            </div>
 
-                           <div class="col-md-4 hover-class">
+                           <div class="col-md-4 hover-class mt-3">
                                <div class="card border-1 border-info" style="width: 18rem;">
                                    <img src="images/images/doc%20(3).jpg" class="card-img-top" alt="...">
                                    <div class="card-body">
-                                       <h5 class="card-title">Card title</h5>
-                                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                       <a href="#" class="btn btn-primary">Go somewhere</a>
+                                       <h5 class="card-title h3">Dr Freddy Pascal</h5>
+                                       <p class="card-text fw-bold text-info">Cardiologist</p>
+                                       <a href="#" class="btn btn-info">Consult</a>
                                    </div>
                                </div>
                            </div>
 
-                           <div class="col-md-4 hover-class">
+                           <div class="col-md-4 hover-class mt-3">
                                <div class="card border-1 border-info" style="width: 18rem;">
                                    <img src="images/images/doc%20(2).jpg" class="card-img-top" alt="...">
                                    <div class="card-body">
-                                       <h5 class="card-title">Card title</h5>
-                                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                       <a href="#" class="btn btn-primary">Go somewhere</a>
+                                       <h5 class="card-title h3">Dr Maria Soul</h5>
+                                       <p class="card-text fw-bold text-info">Psychiatrist</p>
+                                       <a href="#" class="btn btn-info">Consult</a>
                                    </div>
                                </div>
                            </div>

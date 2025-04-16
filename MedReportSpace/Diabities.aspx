@@ -4,9 +4,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    <div class="container-fluid">
        <div class="row">
-           <div class="col-md-5">
+           <div class="col-md-4">
 
-               <div class="card mt-5">
+               <div class="card mt-5 border-0">
                    <div class="card-body">
 
                       <div class="row row1">
@@ -35,7 +35,7 @@
                       <div class="row row3 mt-3">
 
                           <div class="col-md-6">
-                                <label for="floatingInput">Blood Sugar Level</label>
+                                <label for="floatingInput">Blood Sugar</label>
                                 <asp:TextBox ID="BSlvl_txt" runat="server" CssClass="Txt_box form-control form-floating border-info" SkinID="floatingInput">
                                 </asp:TextBox>
                               <h5>mg/dl</h5>
@@ -62,9 +62,9 @@
 
            </div>
 
-                  <div class="col-md-7 mt-5">
+                  <div class="col-md-8 mt-5 overflow-scroll">
 
-           <div class="card">
+           <div class="card border-0">
                <div class="card-body">
 
                    <div class="row">
@@ -75,6 +75,9 @@
                        </div>
                    </div>
 
+                   <asp:LinkButton runat="server" ID="chartreport" CssClass="btn btn-outline-danger" href="BSReport_Chart.aspx">View Chart</asp:LinkButton>
+                   <asp:LinkButton ID="LinkButton1" CssClass="btn btn-outline-dark" runat="server" href="bpreportimg.aspx">Report Images</asp:LinkButton>
+
                    <div class="row">
                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Med_Space_ReportConnectionString %>" SelectCommand="SELECT [labName], [BS_lvl], [Rp_Date],[img_Link] FROM [Blood_Sugar_Reports] Where userName=@userid Order By Rp_Date ASC">
                            <SelectParameters>
@@ -84,10 +87,10 @@
                        <div class="col">
                            <asp:GridView ID="BsReport_Gridview" runat="server" CssClass="table table-light table-bordered border-info" DataSourceID="SqlDataSource1" AutoGenerateColumns="False">
                                <Columns>
-                                   <asp:BoundField DataField="labName" HeaderText="labName" SortExpression="labName"></asp:BoundField>
-                                   <asp:BoundField DataField="BS_lvl" HeaderText="BS_lvl" SortExpression="BS_lvl"></asp:BoundField>
-                                   <asp:BoundField DataField="Rp_Date" HeaderText="Rp_Date" SortExpression="Rp_Date"></asp:BoundField>
-                                   <asp:BoundField DataField="img_Link" HeaderText="Image" SortExpression="img_Link"></asp:BoundField>
+                                   <asp:BoundField DataField="labName" HeaderText="lab Name" SortExpression="labName"></asp:BoundField>
+                                   <asp:BoundField DataField="BS_lvl" HeaderText="Blood Sugar" SortExpression="BS_lvl"></asp:BoundField>
+                                   <asp:BoundField DataField="Rp_Date" HeaderText="Report Date" SortExpression="Rp_Date" DataFormatString="{0:dd/MM/yyyy}"></asp:BoundField>
+                                   <asp:BoundField DataField="img_Link" HeaderText="Image Name" SortExpression="img_Link" ItemStyle-Font-Size="X-Small" ItemStyle-Width="20px"></asp:BoundField>
                                    <asp:TemplateField HeaderText="Download" ItemStyle-HorizontalAlign="Center">
                                        <ItemTemplate>
                                            <asp:Button ID="cmdDownLoad" runat="server" Text="Download" CssClass="btn btn-info" OnClick="cmdDownLoad_Click" />

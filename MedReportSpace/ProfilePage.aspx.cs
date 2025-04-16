@@ -18,8 +18,8 @@ namespace MedReportSpace
         {
             if (!IsPostBack)
             {
-                //Session["username"] = "pratik1234";
-                if (Session["username"] == null || Session["username"] == "")
+                
+                if ((Session["username"] == null || Session["username"] == "") && Session["role"] == null)
                 {
                     Response.Redirect("Login.aspx");
                    
@@ -85,7 +85,7 @@ namespace MedReportSpace
                     {
                         name_txt.Text = dr["full_Name"].ToString();
                         email_txt.Text = dr["email_Id"].ToString();
-                        dob_txt.Text = Convert.ToDateTime(dr["birth_Date"]).ToString("dd-MM-yyyy"); ;
+                        dob_txt.Text = Convert.ToDateTime(dr["birth_Date"]).ToString("dd-MM-yyyy");
                         Gender_ddl.SelectedValue = dr["gender"].ToString();
                         pnum_txt.Text = dr["contact_Number"].ToString();
                         State_list.SelectedValue = dr["state"].ToString();
