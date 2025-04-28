@@ -75,9 +75,62 @@
                         </div>
                     </div>
 
+                      <div class="row">
+                        <div class="col-md-12">
+                            <div class="card border border-0">
+                                <div class="card-header bg-info">
+                                    <h2 class="h1 text-uppercase mb-2 text-light">Prediction</h2>
+                                </div>
+                                <div class="card-body border border-info">
+                                    <div class="row">
+                                        <div class="col-md-7 mx-auto mb-4 mt-3">
+                                            <label class="fw-bold h5">Date</label>
+                                            <asp:TextBox ID="date_txt" runat="server" CssClass=" form-control border-info border-1" TextMode="Date"></asp:TextBox>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 mx-auto mb-2">
+                                            <asp:Button ID="submit_btn" runat="server" CssClass="btn form-control btn-info border-info border-1 fw-bold" Text="Predict" OnClick="submit_btn_Click" />
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12 mx-auto mb-2 h5 mt-3">
+                                            <asp:Label ID="precd_lbl" runat="server" CssClass="form-group mx-auto" Text=""></asp:Label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
 
         </div>
+
+             <div class="row">
+                <div class="col-md-12">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <asp:Chart ID="Chart1" runat="server" Width="1300px" Height="400px">
+                                <Legends>
+                                    <asp:Legend Name="Legend1" />
+                                </Legends>
+                                <Series>
+                                    <asp:Series ChartType="Line" Name="Original" BorderWidth="2" />
+                                    <asp:Series ChartType="Line" Name="Linear" BorderWidth="3" />
+                                    <asp:Series ChartType="Line" Name="Smoothed" BorderWidth="2" />
+                                </Series>
+                                <ChartAreas>
+                                    <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
+                                </ChartAreas>
+                            </asp:Chart>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
     </div>
 </asp:Content>

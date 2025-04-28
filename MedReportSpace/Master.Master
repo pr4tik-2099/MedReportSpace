@@ -60,7 +60,7 @@
                             </ul>
                             <ul class="navbar-nav">
                                 <li class="nav-item dropdown">
-                                    <asp:LinkButton ID="viewBooks_btn" runat="server" class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">View Reports</asp:LinkButton>
+                                    <asp:LinkButton ID="viewReports_btn" runat="server" class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" Visible="false">View Reports</asp:LinkButton>
                                     <ul class="dropdown-menu bg-dark">
                                         <li><a class="dropdown-item" href="Blood_pressure.aspx">Blood Pressure</a></li>
                                         <li><a class="dropdown-item" href="Diabities.aspx">Blood Sugar</a></li>

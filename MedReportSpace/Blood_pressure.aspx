@@ -91,7 +91,7 @@
                         <asp:LinkButton ID="LinkButton1" CssClass="btn btn-outline-dark" runat="server" href="bpreportimg.aspx">Report Images</asp:LinkButton>
 
                         <div class="row">
-                            <asp:SqlDataSource ID="BpReport_Sqldtsrc" runat="server" ConnectionString="<%$ ConnectionStrings:Med_Space_ReportConnectionString2 %>" SelectCommand="SELECT [labName], [BP_mm], [BP_hg], [Rp_Date],img_link FROM [Blood_Pressure_Reports] Where userName=@userid Order By Rp_Date ASC">
+                            <asp:SqlDataSource ID="BpReport_Sqldtsrc" runat="server" ConnectionString="<%$ ConnectionStrings:Med_Space_ReportConnectionString2 %>" SelectCommand="SELECT [labName], [BP_mm], [BP_hg], [Rp_Date],img_link FROM [Blood_Pressure_Reports] Where userName=@userid Order By Rp_Date DESC">
                                 <SelectParameters>
                                     <asp:SessionParameter Name="userid" SessionField="username" Type="String" />
                                 </SelectParameters>

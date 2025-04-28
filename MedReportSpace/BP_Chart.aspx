@@ -17,11 +17,20 @@
                     <asp:DataPoint AxisLabel="B1" YValues="500" />
                 </Points>
             </asp:Series>
+            <asp:Series Name="Series2" ChartType="Bar">
+    <Points>
+        <asp:DataPoint AxisLabel="H" YValues="500" />
+        <asp:DataPoint AxisLabel="Sa" YValues="270" />
+        <asp:DataPoint AxisLabel="Mi" YValues="900" />
+        <asp:DataPoint AxisLabel="Do" YValues="500" />
+        <asp:DataPoint AxisLabel="B1" YValues="700" />
+    </Points>
+</asp:Series>
         </Series>
         <ChartAreas>
             <asp:ChartArea Name="ChartArea1">
-                            <AxisX Title="student"></AxisX>
-            <AxisY Title="Income"></AxisY>
+              <AxisX Title="student"></AxisX>
+              <AxisY Title="Income"></AxisY>
             </asp:ChartArea>
 
         </ChartAreas>

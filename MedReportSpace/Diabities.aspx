@@ -1,5 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Diabities.aspx.cs" Inherits="MedReportSpace.WebForm2" enableEventValidation="false" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <script type="text/javascript">
+     $(document).ready(function () {
+         $('#ContentPlaceHolder1_BsReport_Gridview').prepend($("<thead></thead>").append($(this).find('tr:first'))).DataTable();
+
+     });
+     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    <div class="container-fluid">
@@ -79,7 +85,7 @@
                    <asp:LinkButton ID="LinkButton1" CssClass="btn btn-outline-dark" runat="server" href="bpreportimg.aspx">Report Images</asp:LinkButton>
 
                    <div class="row">
-                       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Med_Space_ReportConnectionString %>" SelectCommand="SELECT [labName], [BS_lvl], [Rp_Date],[img_Link] FROM [Blood_Sugar_Reports] Where userName=@userid Order By Rp_Date ASC">
+                       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Med_Space_ReportConnectionString %>" SelectCommand="SELECT [labName], [BS_lvl], [Rp_Date],[img_Link] FROM [Blood_Sugar_Reports] Where userName=@userid Order By Rp_Date DESC">
                            <SelectParameters>
                                <asp:SessionParameter Name="userid" SessionField="username" Type="String" />
                            </SelectParameters>

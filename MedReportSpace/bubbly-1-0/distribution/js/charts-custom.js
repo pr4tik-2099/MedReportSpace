@@ -405,7 +405,7 @@ $(function () {
                     labels: dateOnlyArray,
                     datasets: [
                         {
-                            label: dateOnlyArray,/*console.log(ReportDate),*/
+                            /*label: dateOnlyArray,*//*console.log(ReportDate),*/
                             backgroundColor: [
                                 gradient2,
                                 gradient2,
@@ -524,7 +524,7 @@ $(function () {
                     labels: dateOnlyArray,
                     datasets: [
                         {
-                            label: dateOnlyArray,/*console.log(ReportDate),*/
+                          /*  label: dateOnlyArray,*//*console.log(ReportDate),*/
                             backgroundColor: [
                                 gradient2,
                                 gradient2,
