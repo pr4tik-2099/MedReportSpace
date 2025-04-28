@@ -24,6 +24,7 @@ namespace MedReportSpace
                 user_name.Text = Session["username"].ToString();
                 user_name.ForeColor = System.Drawing.Color.Cyan;
                 signUp_btn.Visible = false;
+                viewReports_btn.Visible = true;
             }
         }
 
