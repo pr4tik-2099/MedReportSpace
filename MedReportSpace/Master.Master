@@ -102,7 +102,7 @@
                             <div class="row row1 m-lg-5 p-lg-5 mx-auto">
 
 
-                                <div class="col-md-4 gx-5 mb-5">
+                                <div class="col-md-12 col-lg-4 gx-5 mb-5">
                                     <center>
                                         <img src="images/images/new%20logo1.png" width="120" />
                                         <h4 class="text-light fw-bold">MED REPORT SPACE</h4>
@@ -110,7 +110,7 @@
                                     </center>
                                 </div>
 
-                                <div class="col-md-2 offset-lg-1 mx-auto">
+                                <div class="col-lg-2 col-md-3 offset-lg-1 mx-auto">
                                     <h4 class="text-light text-decoration-underline fw-bold">LINKS</h4>
                                     &nbsp &nbsp
                                     <ul class="list-unstyled">
@@ -140,7 +140,7 @@
                                     </ul>
                                 </div>
 
-                                <div class="col-md-2 mx-auto">
+                                <div class="col-lg-2 col-md-3 mx-auto">
                                     <h4 class="fw-bold text-decoration-underline text-light">LOGIN AS</h4>
                                     &nbsp &nbsp
                                     <ul class="list-unstyled">
@@ -156,7 +156,7 @@
                                     </ul>
                                 </div>
 
-                                <div class="col-md-3 mx-auto">
+                                <div class="col-lg-3 col-md-8 mx-auto">
                                     <center>
                                         <h4 class="text-light text-decoration-underline fw-bold">FOLLOW US</h4>
                                         &nbsp&nbsp
