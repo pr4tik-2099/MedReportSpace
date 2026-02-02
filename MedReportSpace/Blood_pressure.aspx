@@ -12,9 +12,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-8 mx-auto">
 
-                <div class="card mt-5 border-0">
+                <div class="card mt-5 border-2 border-success">
                     <div class="card-body">
 
                         <div class="row row1">
@@ -76,11 +76,11 @@
 
             </div>
 
-            <div class="col-md-8  overflow-scroll">
+            <div class="col-lg-8 col-md-12  overflow-scroll">
                 <div class="card border-0">
                     <div class="card-body">
 
-                        <div class="row mt-5">
+                        <div class="row mt-md-5 mt-lg-0">
                             <div class="col">
                                 <center>
                                     <h3>Report Table</h3>
